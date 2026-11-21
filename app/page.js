@@ -1,7 +1,9 @@
-import products from "@/data/products";
+import { getProducts } from "@/lib/products";
 import ProductList from "./ProductList";
 
-export default function Home() {
+export default async function Home() {
+  const products = await getProducts();
+
   return (
     <>
       <main className="mx-auto w-full max-w-6xl px-4 py-8">
